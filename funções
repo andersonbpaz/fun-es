@@ -1,0 +1,68 @@
+# função
+f <- function() {
+  cat("Hello, world!\n")
+}
+f()
+
+# função repetição
+f <- function(nro) {
+  for(i in 1:nro) {
+    cat("Hello, world!\n")
+  }
+}
+f(3)
+
+# função condicional e de repetição
+f <- function(nro) {
+  if(nro < 100) {
+    for(i in 1:nro) {
+      cat("Hello, world!\n")
+    }
+  } else {
+    cat("Tá de brincadeira imprimir isso tudo")
+  }
+}
+f(99)
+f(100)
+
+# função mais complexa
+centralizacao <- function(x) {
+  x <- x - mean(x)
+  return(x)
+}
+
+centralizacao(irisCopia$Sepal.Length)
+
+centralizacao <- function(x) {
+  x <- x - mean(x)
+}
+
+centralizacao(irisCopia$Sepal.Length)
+centroTeste <- centralizacao(irisCopia$Sepal.Length)
+
+# função livro
+f <- function(livro) {
+  cat("welcome to Nárnia")
+}
+f()
+
+# função repetição
+f <- function(nro) {
+  for(i in 1:nro) {
+    cat("welcome to Nárnia")
+  }
+}
+f(3)
+
+# função condicional e de repetição
+f <- function(nro) {
+  if(nro < 100) {
+    for(i in 1:nro) {
+      cat("welcome to Nárnia")
+    }
+  } else {
+    cat("go away from Nárnia")
+  }
+}
+f(99)
+f(100)
