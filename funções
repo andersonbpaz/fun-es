@@ -1,68 +1,11 @@
 # função
-f <- function() {
-  cat("Hello, world!\n")
-}
-f()
-
-# função repetição
-f <- function(nro) {
-  for(i in 1:nro) {
-    cat("Hello, world!\n")
-  }
-}
-f(3)
-
-# função condicional e de repetição
-f <- function(nro) {
-  if(nro < 100) {
-    for(i in 1:nro) {
-      cat("Hello, world!\n")
-    }
-  } else {
-    cat("Tá de brincadeira imprimir isso tudo")
-  }
-}
-f(99)
-f(100)
-
-# função mais complexa
-centralizacao <- function(x) {
-  x <- x - mean(x)
-  return(x)
+jogar.dado <-function(lados,tentativas){
+  sample(lados,tentativas, replace=TRUE)
 }
 
-centralizacao(irisCopia$Sepal.Length)
+lados<-c("um", "dois", "três", "quatro", "cinco", "seis")
 
-centralizacao <- function(x) {
-  x <- x - mean(x)
-}
+#jogar dado cinco vezes
+jogar.dado(lados,5)
 
-centralizacao(irisCopia$Sepal.Length)
-centroTeste <- centralizacao(irisCopia$Sepal.Length)
-
-# função livro
-f <- function(livro) {
-  cat("welcome to Nárnia")
-}
-f()
-
-# função repetição
-f <- function(nro) {
-  for(i in 1:nro) {
-    cat("welcome to Nárnia")
-  }
-}
-f(3)
-
-# função condicional e de repetição
-f <- function(nro) {
-  if(nro < 100) {
-    for(i in 1:nro) {
-      cat("welcome to Nárnia")
-    }
-  } else {
-    cat("go away from Nárnia")
-  }
-}
-f(99)
-f(100)
+jogar.dado(lados,1000)
